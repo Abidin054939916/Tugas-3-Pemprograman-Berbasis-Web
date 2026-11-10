@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; color: #333; }
+header { background: #1e3a8a; color: #fff; padding: 12px 24px; display: flex;
+         justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+header h1 { font-size: 20px; margin: 0; }
+nav button { background: transparent; border: 1px solid #fff; margin-left: 6px; }
+nav button.active { background: #fff; color: #1e3a8a; font-weight: bold; }
+main { max-width: 1150px; margin: 20px auto; padding: 0 12px; }
+.loading, .empty, .info { text-align: center; color: #666; }
+
+.card { background: #fff; padding: 16px; border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(0,0,0,.1); margin-bottom: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+.filter { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.filter input:not([type=checkbox]) { flex: 1; min-width: 200px; }
+
+input, select { padding: 8px; border: 1px solid #ccc; border-radius: 6px; width: 100%; }
+input[type=checkbox] { width: auto; }
+.filter select { width: auto; }
+label { display: block; margin: 10px 0 4px; font-weight: bold; }
+.filter label { display: inline; margin: 0; font-weight: normal; }
+
+button { padding: 8px 14px; border: none; border-radius: 6px; background: #2563eb;
+         color: #fff; cursor: pointer; }
+button:hover { opacity: .85; }
+button.danger { background: #dc2626; }
+button.gray { background: #6b7280; }
+
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; }
+th, td { padding: 10px; border-bottom: 1px solid #e5e7eb; text-align: left; font-size: 14px; }
+th { background: #e0e7ff; }
+
+.badge { padding: 3px 8px; border-radius: 12px; font-size: 12px; font-weight: bold; }
+.green { color: #15803d; background: #dcfce7; }
+.orange { color: #c2410c; background: #ffedd5; }
+.red { color: #b91c1c; background: #fee2e2; }
+.blue { color: #1d4ed8; background: #dbeafe; }
+
+.status-cell { position: relative; }
+.tooltip { position: absolute; top: 100%; left: 0; z-index: 10; background: #111827; color: #fff;
+           padding: 8px 10px; border-radius: 6px; font-size: 13px; width: 200px; }
+
+.error { background: #fee2e2; color: #b91c1c; padding: 8px 8px 8px 26px; border-radius: 6px; }
+.detail { background: #f1f5f9; padding: 8px 12px; border-radius: 6px; margin-top: 8px; }
+.timeline li { margin-bottom: 4px; font-size: 14px; }
+
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5);
+           display: flex; align-items: center; justify-content: center; z-index: 100; }
+.modal { background: #fff; padding: 20px; border-radius: 8px; width: 340px; }
